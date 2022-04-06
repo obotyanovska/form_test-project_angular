@@ -1,0 +1,39 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Plan name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Currency</th>
+      <th scope="col">Card type</th>
+      <th scope="col">Card number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ order?.value?.planName }}</td>
+      <td>{{ order?.value?.price }}</td>
+      <td>{{ order?.value?.currency }}</td>
+      <td>
+        <ng-container>
+          <fa-icon [icon]="cardIcon"> </fa-icon>
+          <span>{{ card?.value?.cardType }}</span>
+        </ng-container>
+      </td>
+      <td>{{ card?.value?.cardNumber }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="submit-block">
+    <button
+      *ngIf="!isLoading"
+      (click)="onSubmit()"
+      type="submit"
+      class="btn btn-primary">
+      Submit
+    </button>
+    <app-loader *ngIf="isLoading"></app-loader>
+  </div>
+  
+</div>

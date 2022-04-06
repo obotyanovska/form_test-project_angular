@@ -1,0 +1,36 @@
+@import './../../../../scss/variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-container {
+  width: 50%;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin: 25px auto;
+}
+
+.form-group,
+label {
+  margin-bottom: 5px;
+}
+
+.submit-block {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.btn[disabled] {
+  background-color: $light-grey;
+  cursor: no-drop;
+}
+
+.invalid-style {
+  color: red;
+  font-size: 14px;
+}
